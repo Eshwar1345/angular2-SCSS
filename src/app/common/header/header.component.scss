@@ -1,0 +1,23 @@
+.header-box {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .header-wrap {
+    background-color: seagreen;
+    color: white;
+    padding: 3px;
+    ul {
+      float: right;
+      padding: 0;
+      li {
+        display: inline-block;
+        list-style: none;
+        padding: 5px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
