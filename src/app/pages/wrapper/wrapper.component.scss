@@ -2,3 +2,9 @@
   padding: 45px 15px;
   height: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper-box {
+    padding: 74px 15px;
+  }
+}
