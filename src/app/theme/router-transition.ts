@@ -33,8 +33,8 @@ export function routerTransition(a) {
 
 function slideToLeft() {
   return trigger('routerTransition', [
-    state('void', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
-    state('*', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
+    state('void', style({ 'background-color': '#fff', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
+    state('*', style({ 'background-color': '#fff', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
     transition(':enter', [
       style({ opacity: '0', width: '50%' }),
       animate('0.5s ease-in-out', style({ opacity: '1', width: '100%' }))
