@@ -33,15 +33,15 @@ export function routerTransition(a) {
 
 function slideToLeft() {
   return trigger('routerTransition', [
-    state('void', style({ 'background-color': '#fff', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
-    state('*', style({ 'background-color': '#fff', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
+    state('void', style({ 'background-color': 'white', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
+    state('*', style({ 'background-color': 'white', height: '100%', padding: "45px 15px", position: 'absolute', width: '100%' }) ),
     transition(':enter', [
-      style({ opacity: '0', width: '50%' }),
-      animate('0.5s ease-in-out', style({ opacity: '1', width: '100%' }))
+      style({ opacity: 0, '-webkit-transform': 'translateX(100%)', transform: 'translateX(100%)' }),
+      animate('0.5s ease-in-out', style({ opacity: '1', '-webkit-transform': 'translateX(0%)', transform: 'translateX(0%)' }))
     ]),
     transition(':leave', [
-      style({ '-webkit-transform': 'translateX(50%)', transform: 'translateX(50%)' }),
-      animate('0.5s ease-in-out', style({ opacity: 0, '-webkit-transform': 'translateX(-100%)', transform: 'translateX(-100%)', width: '50%' }))
+      style({ background: 'gray', opacity: '1', '-webkit-transform': 'translateX(0%)', transform: 'translateX(0%)' }),
+      animate('0.5s ease-in-out', style({ opacity: 0, '-webkit-transform': 'translateX(-50%)', transform: 'translateX(-50%)', width: '50%' }))
     ])
   ]);
 }
