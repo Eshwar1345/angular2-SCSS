@@ -21,6 +21,7 @@ function slideToLeft() {
 */
 
 import {trigger, state, animate, style, transition} from '@angular/core';
+import {SlideService} from '../services/slide.service';
 
 export function routerTransition(a) {
   switch (a) {
@@ -33,21 +34,21 @@ export function routerTransition(a) {
 
 function slideToLeft() {
   return trigger('routerTransition', [
-    state('void', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
-    state('*', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
+    state('void', style({ 'background-color': 'red', height: 'calc(100% - 90px)', overflow: 'auto', position: 'absolute', width: 'calc(100% - 35px)' }) ),
+    state('*', style({ 'background-color': '#fff', display: 'block', height: 'calc(100% - 90px)', overflow: 'auto', position: 'absolute', width: 'calc(100% - 35px)' }) ),
     transition(':enter', [
       style({ opacity: '0', width: '50%' }),
       animate('0.5s ease-in-out', style({ opacity: '1', width: '100%' }))
     ]),
     transition(':leave', [
-      style({ '-webkit-transform': 'translateX(50%)', transform: 'translateX(50%)' }),
+      style({ '-webkit-transform': 'translateX(0)', transform: 'translateX(0)' }),
       animate('0.5s ease-in-out', style({ opacity: 0, '-webkit-transform': 'translateX(-100%)', transform: 'translateX(-100%)', width: '50%' }))
     ])
   ]);
 }
 function slideToRight() {
   return trigger('routerTransition', [
-    state('void', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
+    state('void', style({ 'background-color': 'blue', height: '100%', position: 'absolute', width: '100%' }) ),
     state('*', style({ 'background-color': '#fff', height: '100%', position: 'absolute', width: '100%' }) ),
     transition(':enter', [
       style({ opacity: '0', '-webkit-transform': 'translateX(-50%)', transform: 'translateX(-50%)', width: '50%' }),

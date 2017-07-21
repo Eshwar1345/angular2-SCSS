@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlideService } from './services/slide.service';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.route';
@@ -25,9 +27,10 @@ import { ContactComponent } from './pages/contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SlideService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,8 @@
 .wrapper-box {
-  padding: 45px 15px;
   height: 100%;
+  overflow: hidden;
+  padding: 45px 15px;
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
