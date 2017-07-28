@@ -7,8 +7,12 @@
   width: 100%;
   .footer-wrap {
     padding: 3px;
-    a {
-      color: white;
+    .footer-links {
+      a {
+        color: white;
+        border-right: 1px solid #ccc;
+        padding-right: 5px;
+      }
     }
   }
 }
