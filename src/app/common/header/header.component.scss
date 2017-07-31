@@ -16,8 +16,13 @@
         padding: 5px;
         a {
           color: white;
-          border-right: 1px solid #ccc;
-          padding-right: 5px;
+          border-right: 1px solid lightgray;
+          padding-right: 10px;
+        }
+        &:last-child {
+          a {
+            border: none;
+          }
         }
       }
     }
